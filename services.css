@@ -1,0 +1,236 @@
+/* General Styling for Body */
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 50px;
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+/* Hover Effect on Links */
+.nav-links li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff9800;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::before {
+    width: 100%;
+}
+
+.nav-links li a:hover {
+    color: #ff9800;
+}
+
+/* Get In Touch Button Styling */
+.get-in-touch .btn-touch {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.get-in-touch .btn-touch:hover {
+    background-color: #e68900;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links on small devices */
+    }
+    
+    /* Add a hamburger icon for mobile if desired */
+    /* Additional styles for mobile menu if needed */
+}
+
+/* Sticky Navbar Animation */
+.navbar.scrolled {
+    background-color: rgba(30, 30, 30, 0.9); /* Change background color on scroll */
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* Services Section */
+.services-section {
+    padding: 60px 20px;
+    background-color: #eaf2f8;
+}
+
+.services-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.service-box {
+    background-color: white;
+    margin: 20px 0;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    background-color: #f7f7f7;
+}
+
+.service-title {
+    font-size: 2rem;
+    color: #e74c3c; /* Unique color for titles */
+    margin-bottom: 15px;
+}
+
+.service-description {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .service-box {
+        padding: 20px 15px;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .service-title {
+        font-size: 1.8rem;
+    }
+
+    .service-description {
+        font-size: 1.1rem;
+    }
+}
+/* Footer Styling */
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.5rem;
+    color: #ff6600;
+    margin-bottom: 15px;
+  }
+  
+  .footer-section p, .footer-section ul {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    color: #ff6600;
+  }
+  
+  /* Social Media Icons */
+  .social-icons a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    display: inline-block;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #ff6600;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+  }
+  
+  /* Responsive Footer */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

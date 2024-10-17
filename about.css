@@ -1,0 +1,345 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 50px;
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+/* Hover Effect on Links */
+.nav-links li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff9800;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::before {
+    width: 100%;
+}
+
+.nav-links li a:hover {
+    color: #ff9800;
+}
+
+/* Get In Touch Button Styling */
+.get-in-touch .btn-touch {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.get-in-touch .btn-touch:hover {
+    background-color: #e68900;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links on small devices */
+    }
+    
+    /* Add a hamburger icon for mobile if desired */
+    /* Additional styles for mobile menu if needed */
+}
+
+/* Sticky Navbar Animation */
+.navbar.scrolled {
+    background-color: rgba(30, 30, 30, 0.9); /* Change background color on scroll */
+}
+
+/* About Section */
+.about-section {
+    background-color: #ffffff;
+    padding: 50px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    background: -webkit-linear-gradient(#4caf50, #ff9800);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: fadeIn 1s ease-in;
+}
+
+.mission, .vision {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #333;
+    animation: slideIn 1s ease-in-out;
+}
+
+.mission strong, .vision strong {
+    color: #ff5722;
+}
+
+/* Team Section */
+.team-section {
+    background-color: #f5f5ff;
+    padding: 50px;
+}
+
+.team-title {
+    font-size: 2.5rem;
+    color: #4caf50;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.team-member {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: bounceIn 1.5s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-name {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.team-role {
+    font-size: 1.2rem;
+    color: #ff5722;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        margin-bottom: 20px;
+    }
+}
+.about-section {
+    background-color: #f0f4f8; /* Light blueish background to attract users */
+    padding: 60px 20px; /* Adds padding around the section */
+    color: #333; /* Darker text color for better readability */
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto; /* Center the content */
+}
+
+.section-title {
+    font-size: 3rem;
+    color: #4A90E2; /* Custom color for the title */
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.mission, .vision {
+    font-size: 1.5rem;
+    color: #555; /* Slightly lighter text color for mission/vision */
+    margin: 15px 0;
+    line-height: 1.6;
+    background-color: #ffffff; /* White background for mission/vision to contrast with the section background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-section {
+    margin-top: 40px;
+}
+
+.team-title {
+    font-size: 2.5rem;
+    color: #E94E77; /* Unique color for the team section title */
+    text-align: center;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.team-member {
+    flex-basis: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.team-name {
+    font-size: 1.5rem;
+    color: #27ae60; /* Green for team names */
+}
+
+.team-role {
+    font-size: 1.2rem;
+    color: #8e44ad; /* Purple for team roles */
+}
+/* Footer Styling */
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.5rem;
+    color: #ff6600;
+    margin-bottom: 15px;
+  }
+  
+  .footer-section p, .footer-section ul {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    color: #ff6600;
+  }
+  
+  /* Social Media Icons */
+  .social-icons a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    display: inline-block;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #ff6600;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+  }
+  
+  /* Responsive Footer */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
